@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Guilherme ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+overflow:hidden;
+background:
+radial-gradient(circle at top,#1c2448,#090d1d 60%,#050816);
+color:white;
+font-family:'Inter',sans-serif;
+height:100vh;
+}
+
+#stars{
+position:fixed;
+inset:0;
+overflow:hidden;
+pointer-events:none;
+}
+
+.star{
+position:absolute;
+background:white;
+border-radius:50%;
+animation:twinkle infinite alternate;
+}
+
+@keyframes twinkle{
+from{
+opacity:.2;
+}
+to{
+opacity:1;
+}
+}
+
+.screen{
+position:absolute;
+inset:0;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:30px;
+
+opacity:0;
+pointer-events:none;
+
+transition:1s;
+}
+
+.screen.active{
+opacity:1;
+pointer-events:auto;
+}
+
+.card{
+width:min(850px,95vw);
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.1);
+
+padding:40px;
+
+border-radius:30px;
+
+box-shadow:
+0 0 40px rgba(255,215,120,.15);
+}
+
+h1{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+text-align:center;
+color:#f5d788;
+margin-bottom:20px;
+}
+
+.text{
+font-size:1.2rem;
+line-height:2;
+white-space:pre-line;
+text-align:center;
+min-height:260px;
+}
+
+button{
+display:block;
+margin:30px auto 0;
+
+border:none;
+
+background:#f5d788;
+
+color:#1d1d1d;
+
+font-weight:700;
+
+padding:16px 35px;
+
+border-radius:999px;
+
+cursor:pointer;
+
+font-size:1rem;
+
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+#hearts{
+position:fixed;
+inset:0;
+pointer-events:none;
+overflow:hidden;
+}
+
+.heart{
+position:absolute;
+bottom:-40px;
+font-size:22px;
+animation:rise linear forwards;
+}
+
+@keyframes rise{
+
+from{
+transform:translateY(0);
+opacity:1;
+}
+
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+.finalTitle{
+font-size:5rem;
+font-family:'Cormorant Garamond',serif;
+text-align:center;
+color:#f5d788;
+margin-bottom:20px;
+}
+
+.finalSub{
+text-align:center;
+font-size:1.3rem;
+line-height:2;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="stars"></div>
+
+<div id="hearts"></div>
+
+<audio id="music" loop>
+<source src="willow.mp3" type="audio/mpeg">
+</audio>
+<audio id="music" loop>
+<source src="willow.mp3" type="audio/mpeg">
+</audio>
+<div id="app">
+
+<section class="screen active" id="screen0">
+
+<div class="card">
+
+<h1>Para Guilherme ❤️</h1>
+
+<div class="text">
+Um presente para o homem que transformou
+meus dias comuns em algo extraordinário.
+
+✨
+
+Toque para começar.
+</div>
+
+<button onclick="startExperience()">
+Começar
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="screen1">
+
+<div class="card">
+
+<div class="text" id="text1"></div>
+
+<button onclick="nextScreen()">
+Continuar
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="screen2">
+
+<div class="card">
+
+<div class="text" id="text2"></div>
+
+<button onclick="nextScreen()">
+Continuar
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="screen3">
+
+<div class="card">
+
+<div class="text" id="text3"></div>
+
+<button onclick="nextScreen()">
+Continuar
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="screen4">
+
+<div class="card">
+
+<div class="text" id="text4"></div>
+
+<button onclick="nextScreen()">
+Continuar
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="screen5">
+
+<div class="card">
+
+<div class="text" id="text5"></div>
+
+<button onclick="nextScreen()">
+Continuar
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="screen6">
+
+<div class="card">
+
+<div class="text" id="text6"></div>
+
+<button onclick="nextScreen()">
+Continuar
+</button>
+
+</div>
+
+</section>
+
+<section class="screen" id="screen7">
+
+<div class="card">
+
+<div class="finalTitle">
+Amanda ❤️ Guilherme
+</div>
+
+<div class="finalSub">
+
+Porque você não é apenas
+a pessoa que eu amo.
+
+Você é o meu porto seguro.
+
+Meu melhor amigo.
+
+Meu amor.
+
+Meu batata.
+
+Meu homem.
+
+❤️
+
+E se existirem infinitas versões do universo...
+
+Eu ainda escolheria você.
+
+Sempre você.
+
+Feliz Dia dos Namorados.
+
+</div>
+
+<button onclick="startHearts()">
+❤️
+</button>
+
+</div>
+
+</section>
+
+</div>
+<script>
+
+const screens = document.querySelectorAll('.screen');
+
+let currentScreen = 0;
+
+const textos = [
+
+`Amo,
+
+Eu te amo mais do que consigo colocar em palavras.
+
+Obrigada por cada momento que vivemos juntos,
+por cada conversa,
+cada risada,
+cada abraço.
+
+E como sempre...
+
+com um toque de Taylor para você entender a minha língua. ❤️`,
+
+`Existe uma música chamada Willow.
+
+Você sabe o quanto ela é especial para mim, batata.
+
+"Sou como a água quando seu navio chegou naquela noite.
+
+Áspera na superfície,
+mas você a cortou como uma faca.
+
+Perdida em sua correnteza
+como um vinho precioso."`,
+
+`"Quanto mais você fala,
+menos eu sei.
+
+Para onde quer que você vá,
+eu te sigo.
+
+Imploro que você pegue minha mão.
+
+Destrua meus planos,
+esse é o meu homem."`,
+
+`E talvez seja exatamente isso
+que nossa relação representa para mim.
+
+Um salgueiro.
+
+Forte,
+mas gentil.
+
+Capaz de se curvar quando o vento sopra mais forte,
+sem quebrar.
+
+Capaz de enfrentar tempestades
+e continuar de pé.
+
+Capaz de florescer novamente
+a cada primavera.`,
+
+`Nosso amor é assim.
+
+Já enfrentou dias leves.
+
+Dias difíceis.
+
+Momentos felizes.
+
+Momentos complicados.
+
+Mas nunca deixou de crescer.
+
+E como um vinho raro e sem preço,
+amadurece com o tempo.
+
+Fica mais profundo.
+
+Mais bonito.
+
+Mais valioso.`,
+
+`"Mostre-me os lugares
+onde os outros lhe causaram cicatrizes."
+
+E eu prometo continuar cuidando
+de cada parte sua.
+
+Dos seus sonhos.
+
+Dos seus medos.
+
+Das suas alegrias.
+
+Das suas cicatrizes.
+
+De tudo aquilo que faz de você
+quem você é.`
+
+];
+
+function startExperience(){
+
+const music = document.getElementById('music');
+
+music.play().catch(()=>{});
+
+showScreen(1);
+
+typeText(
+document.getElementById('text1'),
+textos[0]
+);
+
+}
+
+function nextScreen(){
+
+screens[currentScreen].classList.remove('active');
+
+currentScreen++;
+
+showScreen(currentScreen);
+
+if(currentScreen >= 1 && currentScreen <= 6){
+
+const alvo = document.getElementById(
+'text' + currentScreen
+);
+
+const texto = textos[currentScreen-1];
+
+typeText(alvo,texto);
+
+}
+
+}
+
+function showScreen(numero){
+
+screens.forEach(
+s => s.classList.remove('active')
+);
+
+screens[numero].classList.add('active');
+
+}
+
+function typeText(element,text){
+
+element.innerHTML='';
+
+let i = 0;
+
+const timer = setInterval(()=>{
+
+element.innerHTML += text.charAt(i);
+
+i++;
+
+if(i >= text.length){
+
+clearInterval(timer);
+
+}
+
+},25);
+
+}
+
+function startHearts(){
+
+const container =
+document.getElementById('hearts');
+
+setInterval(()=>{
+
+const heart =
+document.createElement('div');
+
+heart.className='heart';
+
+heart.innerHTML='❤️';
+
+heart.style.left =
+Math.random()*100 + '%';
+
+heart.style.animationDuration =
+(5 + Math.random()*5)+'s';
+
+container.appendChild(heart);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},10000);
+
+},300);
+
+}
+
+function createStars(){
+
+const stars =
+document.getElementById('stars');
+
+for(let i=0;i<150;i++){
+
+const star =
+document.createElement('div');
+
+star.className='star';
+
+const size =
+Math.random()*3 + 1;
+
+star.style.width =
+size+'px';
+
+star.style.height =
+size+'px';
+
+star.style.left =
+Math.random()*100+'%';
+
+star.style.top =
+Math.random()*100+'%';
+
+star.style.animationDuration =
+(2+Math.random()*4)+'s';
+
+stars.appendChild(star);
+
+}
+
+}
+
+createStars();
+
+</script>
+
+</body>
+
+</html>
